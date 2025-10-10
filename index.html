@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monica Alegre | GIS Consultant</title>
+  <meta name="description"
+    content="Portfolio of Monica Alegre, GIS Consultant specialized in 3D visualization, data automation and interactive dashboards." />
+  <meta name="keywords"
+    content="GIS, 3D, Mapping, Visualization, FME, ArcGIS, Leaflet, MapLibre, Python, WebGL, Cesium, Dashboard" />
+  <meta property="og:title" content="Monica Alegre | GIS Consultant" />
+  <meta property="og:description"
+    content="Portfolio of Monica Alegre — 3D visualization and interactive mapping projects." />
+  <meta property="og:image" content="img/thumbnail.jpg" />
+  <meta property="og:url" content="https://monica-alegre.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    .top-bar {
+      width: 100%;
+      padding: 10px 2%;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 2px solid #000;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 10px;
+    }
+
+    header {
+      padding: 100px 8% 30px;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: 200;
+      font-size: 1.5rem;
+      margin: 5px 0 30px 0;
+    }
+
+    p.description {
+      font-weight: 300;
+      max-width: 700px;
+      margin-bottom: 0;
+    }
+
+    p.description a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px solid #000;
+    }
+
+    p.description a:hover {
+      opacity: 0.6;
+    }
+
+    .lang-btn {
+      width: 36px;
+      height: 36px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: .5px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    section {
+      padding: 0 8% 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 300;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 40px 0 0;
+      border-bottom: 1px solid #000;
+      font-style: italic;
+    }
+
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 50px 0;
+    }
+
+    .project:not(:last-child) {
+      border-bottom: 1px solid #000;
+    }
+
+    .project:last-child {
+      padding-bottom: 60px;
+    }
+
+    .project-info {
+      flex: 0 0 calc(33.3% - 20px);
+      min-width: 260px;
+    }
+
+    .project-info h3 {
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .project-info p {
+      font-weight: 300;
+      margin-bottom: 8px;
+      line-height: 1.8;
+    }
+
+    .project-info .data-line,
+    .project-info .tech-line {
+      margin-bottom: 15px;
+    }
+
+    .project-info a {
+      text-decoration: none;
+      border: 1px solid #000;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+      color: #000;
+      display: inline-block;
+      margin-top: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .project-info a:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .project-media {
+      flex: 0 0 calc(66.6% - 20px);
+      display: flex;
+      align-items: center;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .icon-ln {
+      vertical-align: -2px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 0.9rem;
+      font-weight: 300;
+      border-top: 2px solid #000;
+      margin-top: 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 1200px) {
+      .project-info {
+        flex: 0 0 calc(35% - 20px);
+      }
+
+      .project-media {
+        flex: 0 0 calc(65% - 20px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .top-bar {
+        padding: 15px 6%;
+      }
+
+      .project {
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 0;
+      }
+
+      .project-info,
+      .project-media {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      header {
+        padding: 40px 6% 30px;
+      }
+
+      section {
+        padding: 0 6%;
+      }
+
+      .section-header {
+        padding: 30px 6% 15px 6%;
+        margin: 0 -6% 40px -6%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .top-bar {
+        padding: 12px 5%;
+      }
+
+      .section-header {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+        padding: 25px 5% 12px 5%;
+        margin: 0 -5% 30px -5%;
+      }
+
+      header {
+        padding: 30px 5% 25px;
+      }
+
+      section {
+        padding: 0 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="lang-switch">
+      <button class="lang-btn" id="btn-en" aria-label="English">EN</button>
+      <button class="lang-btn" id="btn-es" aria-label="Español">ES</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>Monica Alegre</h1>
+    <h2>GIS Consultant</h2>
+    <p class="description">
+      <span id="bio-text"
+        data-en="I'm a GIS specialist with a solid technical background in data modeling, geospatial workflow automation, and the creation of interactive maps.<br> I'm interested in finding new ways to understand territory through data, turning it into visual stories, whether in a dashboard or on a 3D globe.<br> I'm currently exploring 3D GIS as a more intuitive and expressive way to represent space.<br><br> Let's connect on"
+        data-es="Soy especialista GIS con una base técnica sólida en modelado de datos, automatización de procesos geoespaciales y creación de mapas interactivos.<br> 
+        Me interesa encontrar nuevas formas de entender el territorio a través de los datos, transformándolos en historias visuales, ya sea en un dashboard o en un globo 3D.<br> Actualmente estoy explorando el GIS 3D como una forma más intuitiva y expresiva de representar el espacio.<br><br> Puedes contactarme en">
+        I'm a GIS specialist with a solid technical background in data modeling, geospatial workflow automation, and the creation of interactive maps.<br> I'm interested in finding new ways to understand territory through data, turning it into visual stories, whether in a dashboard or on a 3D globe.<br> I'm currently exploring 3D GIS as a more intuitive and expressive way to represent space.<br><br> Let's connect on
+      </span>
+      <a href="https://www.linkedin.com/in/malegre-gis/" target="_blank" aria-label="LinkedIn">LinkedIn</a>.
+    </p>
+  </header>
+
+  <section>
+    <div class="section-header" data-en="3D GIS Visuals" data-es="Visuales GIS 3D">3D GIS Visuals</div>
+
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="Mountain 3D Viewer" data-es="Visor 3D de Montañas">Mountain 3D Viewer</h3>
+        <p data-en="Interactive 3D visualization to explore and compare mountain scale and form. Includes conceptual, contour, and realistic views with adjustable vertical exaggeration."
+           data-es="Visualización 3D interactiva para explorar y comparar la escala y la forma de diferentes montañas. Incluye vistas conceptual, de contorno y realista con ajuste de exageración vertical.">
+          Interactive 3D visualization to explore and compare mountain scale and form. Includes conceptual, contour, and realistic views with adjustable vertical exaggeration.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> Copernicus DEM 30 m and Sentinel-2 Cloudless mosaics."
+           data-es="<strong>Datos:</strong> Copernicus DEM 30 m y mosaicos Sentinel-2 Cloudless.">
+          <strong>Data:</strong> Copernicus DEM 30 m and Sentinel-2 Cloudless mosaics.
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> Three.js, WebGL, GDAL, and QGIS."
+           data-es="<strong>Tecnologías:</strong> Three.js, WebGL, GDAL y QGIS.">
+          <strong>Technologies:</strong> Three.js, WebGL, GDAL, and QGIS.
+        </p>
+        <a href="https://monica-alegre.github.io/mountain-3d-viewer/" target="_blank" data-en="View project"
+          data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/mountain-3d-viewer.gif" alt="Mountain 3D Viewer" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="3D Population Map of Spain" data-es="Mapa 3D de Población de España">3D Population Map of Spain</h3>
+        <p data-en="3D visualization of Spain's population distribution for 2025, highlighting density patterns across the territory."
+           data-es="Visualización 3D de la distribución poblacional de España en 2025, mostrando los patrones de densidad en el territorio.">
+          3D visualization of Spain's population distribution for 2025, highlighting density patterns across the territory.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> WorldPop (1 km grid)."
+           data-es="<strong>Datos:</strong> WorldPop (cuadrícula de 1 km).">
+          <strong>Data:</strong> WorldPop (1 km grid).
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> Kepler.gl and FME."
+           data-es="<strong>Tecnologías:</strong> Kepler.gl y FME.">
+          <strong>Technologies:</strong> Kepler.gl and FME.
+        </p>
+        <a href="https://spain-population-3d.surge.sh" target="_blank" data-en="View project"
+          data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/spain-population-3d.gif" alt="Spain Population 3D" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-info">
+       <h3 data-en="Spain Immigration Globe" data-es="Globo de Inmigración en España">Spain Immigration Globe</h3>
+        <p data-en="3D interactive globe showing immigration flows to Spain, combining data, graphics, and rankings by country."
+           data-es="Globo 3D interactivo que muestra los flujos migratorios hacia España, con datos, gráficos y rankings por país.">
+          3D interactive globe showing immigration flows to Spain, combining data, graphics, and rankings by country.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> Eurostat (Population by country of birth), UN WPP, and ArcGIS Living Atlas geometries."
+           data-es="<strong>Datos:</strong> Eurostat (población por país de nacimiento), UN WPP y geometrías del ArcGIS Living Atlas.">
+          <strong>Data:</strong> Eurostat (Population by country of birth), UN WPP, and ArcGIS Living Atlas geometries.
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> ArcGIS Experience Builder, Scene Viewer, and ArcGIS Pro."
+           data-es="<strong>Tecnologías:</strong> ArcGIS Experience Builder, Scene Viewer y ArcGIS Pro.">
+          <strong>Technologies:</strong> ArcGIS Experience Builder, Scene Viewer, and ArcGIS Pro.
+        </p>
+        <a href="https://experience.arcgis.com/experience/df6faa35df934fcbbd5e1d4a2ca483b4" target="_blank"
+          data-en="View project" data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/spain-inmigration-globe.gif" alt="Spain Immigration Globe" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="World Rivers 3D Globe" data-es="Globo 3D de Ríos del Mundo">World Rivers 3D Globe</h3>
+        <p data-en="3D globe visualizing the main rivers of the world with interactive information from Wikipedia and Wikidata."
+           data-es="Globo 3D que muestra los principales ríos del mundo con información interactiva procedente de Wikipedia y Wikidata.">
+          3D globe visualizing the main rivers of the world with interactive information from Wikipedia and Wikidata.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> Natural Earth (10 m rivers), NASA Visible Earth basemap, and Wikidata API."
+           data-es="<strong>Datos:</strong> Natural Earth (ríos 10 m), mapa base NASA Visible Earth y API de Wikidata.">
+          <strong>Data:</strong> Natural Earth (10 m rivers), NASA Visible Earth basemap, and Wikidata API.
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> Globe.gl (Three.js), Wikidata API, and Wikipedia REST API."
+           data-es="<strong>Tecnologías:</strong> Globe.gl (Three.js), API de Wikidata y API REST de Wikipedia.">
+          <strong>Technologies:</strong> Globe.gl (Three.js), Wikidata API, and Wikipedia REST API.
+        </p>
+        <a href="https://monica-alegre.github.io/world-rivers-globe/" target="_blank" data-en="View project"
+          data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/world-rivers-globe.gif" alt="World Rivers 3D Globe" />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-header" data-en="Interactive Dashboards" data-es="Dashboards Interactivos">Interactive Dashboards</div>
+
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="Spain Real Estate Evolution" data-es="Evolución del Mercado Inmobiliario en España">Spain Real Estate Evolution</h3>
+        <p data-en="Dashboard analyzing Spain's real estate dynamics from 2011 to 2024 through rental prices, housing sales, and business activity."
+           data-es="Dashboard que analiza la evolución del mercado inmobiliario en España entre 2011 y 2024, con precios de alquiler, compraventas y actividad empresarial.">
+          Dashboard analyzing Spain's real estate dynamics from 2011 to 2024 through rental prices, housing sales, and business activity.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> MIVAU (SERPAVI), INE (DIRCE), and MITMS (Transaction Statistics)."
+           data-es="<strong>Datos:</strong> MIVAU (SERPAVI), INE (DIRCE) y MITMS (Estadística de Transacciones).">
+          <strong>Data:</strong> MIVAU (SERPAVI), INE (DIRCE), and MITMS (Transaction Statistics).
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> ArcGIS Map Viewer, ArcGIS Pro, and Instant Apps."
+           data-es="<strong>Tecnologías:</strong> ArcGIS Map Viewer, ArcGIS Pro e Instant Apps.">
+          <strong>Technologies:</strong> ArcGIS Map Viewer, ArcGIS Pro, and Instant Apps.
+        </p>
+        <a href="https://malegre.maps.arcgis.com/apps/instant/sidebar/index.html?appid=d32dc405c60f43d1bb81168048589a61"
+          target="_blank" data-en="View project" data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/spain-real-estate.png" alt="Spain Real Estate Dashboard" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="Gentrification Index BCN" data-es="Índice de Gentrificación BCN">Gentrification Index BCN</h3>
+        <p data-en="Dashboard proposing a gentrification index for Barcelona based on 17 open-data indicators grouped into five dimensions."
+           data-es="Dashboard que propone un índice de gentrificación para Barcelona basado en 17 indicadores de datos abiertos agrupados en cinco dimensiones.">
+          Dashboard proposing a gentrification index for Barcelona based on 17 open-data indicators grouped into five dimensions.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> Barcelona City Council, INCASOL, Idealista, and Inside Airbnb (2014-2018)"
+           data-es="<strong>Datos:</strong> Ayuntamiento de Barcelona, INCASOL, Idealista e Inside Airbnb (2014-2018).">
+          <strong>Data:</strong> Barcelona City Council, INCASOL, Idealista, and Inside Airbnb (2014-2018).
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> ArcGIS Pro and ArcGIS Dashboards."
+           data-es="<strong>Tecnologías:</strong> ArcGIS Pro y ArcGIS Dashboards.">
+          <strong>Technologies:</strong> ArcGIS Pro and ArcGIS Dashboards.
+        </p>
+        <a href="https://www.arcgis.com/apps/dashboards/b98f8e5f9e2e4e5790fb2906fb299c4a" target="_blank"
+          data-en="View project" data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/gentrification-index-bcn.png" alt="Gentrification Index BCN" />
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="Creative Index AMB" data-es="Índice Creativo AMB">Creative Index AMB</h3>
+        <p data-en="Dashboard exploring the spatial concentration of creative industries in the Barcelona Metropolitan Area and their relation to urban transformation."
+           data-es="Panel que explora la concentración espacial de las industrias creativas en el Área Metropolitana de Barcelona y su relación con la transformación urbana.">
+          Dashboard exploring the spatial concentration of creative industries in the Barcelona Metropolitan Area and their relation to urban transformation.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> AMB, Gencat, DIBA, IERMB, ICGC, INE, Camerdata, and additional open data (2011-2019)."
+           data-es="<strong>Datos:</strong> AMB, Gencat, DIBA, IERMB, ICGC, INE, Camerdata y datos abiertos adicionales (2011-2019).">
+          <strong>Data:</strong> AMB, Gencat, DIBA, IERMB, ICGC, INE, Camerdata, and additional open data (2011-2019).
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> ArcGIS Pro and ArcGIS Dashboards."
+           data-es="<strong>Tecnologías:</strong> ArcGIS Pro y ArcGIS Dashboards.">
+          <strong>Technologies:</strong> ArcGIS Pro and ArcGIS Dashboards.
+        </p>
+        <a href="https://malegre.maps.arcgis.com/apps/dashboards/c74fa6b4e8204368a218e39e33a36cb4" target="_blank"
+          data-en="View project" data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/creative-index-amb.png" alt="Creative Index AMB" />
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Monica Alegre
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-en]").forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+      document.querySelectorAll("a[data-en]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+      localStorage.setItem("lang", lang);
+    }
+    const userLang = localStorage.getItem("lang") || (navigator.language.startsWith("es") ? "es" : "en");
+    setLanguage(userLang);
+    document.getElementById("btn-en").addEventListener("click", () => setLanguage("en"));
+    document.getElementById("btn-es").addEventListener("click", () => setLanguage("es"));
+  </script>
+</body>
+
+</html>
