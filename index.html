@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Monica Alegre | GIS Consultant</title>
-  <meta name="description" content="Portfolio of Monica Alegre, GIS Consultant specialized in data automation, 3D geospatial visualization, and interactive mapping." />
+  <title>Monica Alegre | GIS Specialist</title>
+  <meta name="description" content="Portfolio of Monica Alegre, GIS Specialist specialized in data automation, 3D geospatial visualization, and interactive mapping." />
   <meta name="keywords" content="GIS, spatial data, data automation, FME, ArcGIS, Leaflet, MapLibre, Three.js, Python, JavaScript, WebGL, 3D GIS, geospatial visualization, interactive mapping, dashboards, web mapping" />
 
   <!-- Social preview -->
-  <meta property="og:title" content="Monica Alegre | GIS Consultant" />
-  <meta property="og:description" content="Portfolio of Monica Alegre - GIS consultant specialized in data automation, 3D geospatial visualization, and interactive mapping." />
+  <meta property="og:title" content="Monica Alegre | GIS Specialist" />
+  <meta property="og:description" content="Portfolio of Monica Alegre, GIS Specialist specialized in data automation, 3D geospatial visualization, and interactive mapping." />
   <meta property="og:image" content="https://monica-alegre.me/img/thumbnail.jpg" />
   <meta property="og:url" content="https://monica-alegre.me/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Favicon -->
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="img/favicon.png" type="image/x-icon" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
@@ -123,7 +123,7 @@
       letter-spacing: .5px;
       padding: 40px 0 0;
       border-bottom: 1px solid #000;
-      font-style: italic;
+      font-style: normal;
     }
 
     .project {
@@ -187,7 +187,8 @@
       align-items: center;
     }
 
-    .project-media img {
+    .project-media img,
+    .project-media video {
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -293,21 +294,29 @@
   </div>
 
   <header>
-    <h1>Monica Alegre</h1>
-    <h2>GIS Consultant</h2>
+    <h1 data-en="Monica Alegre" data-es="Mónica Alegre">Monica Alegre</h1>
+    <h2 data-en="GIS Specialist" data-es="Especialista en GIS">GIS Specialist</h2>
     <p class="description">
       <span id="bio-text"
-        data-en="I'm a GIS specialist with a solid technical background in data modeling, geospatial workflow automation, and the creation of interactive maps.<br> I'm interested in finding new ways to understand territory through data, turning it into visual stories, whether in a dashboard or on a 3D globe.<br> I'm currently exploring 3D GIS as a more intuitive and expressive way to represent space.<br><br> Let's connect on"
-        data-es="Soy especialista GIS con una base técnica sólida en modelado de datos, automatización de procesos geoespaciales y creación de mapas interactivos.<br> 
-        Me interesa encontrar nuevas formas de entender el territorio a través de los datos, transformándolos en historias visuales, ya sea en un dashboard o en un globo 3D.<br> Actualmente estoy explorando el GIS 3D como una forma más intuitiva y expresiva de representar el espacio.<br><br> Puedes contactarme en">
-        I'm a GIS specialist with a solid technical background in data modeling, geospatial workflow automation, and the creation of interactive maps.<br> I'm interested in finding new ways to understand territory through data, turning it into visual stories, whether in a dashboard or on a 3D globe.<br> I'm currently exploring 3D GIS as a more intuitive and expressive way to represent space.<br><br> Let's connect on
+        data-en="GIS Specialist with a strong technical background in geospatial data, data modeling, workflow automation, and WebGIS applications.<br>
+        I turn complex spatial data into practical, interactive solutions, from automated workflows and data-driven maps to dashboards and 3D visualizations.<br>
+        I combine technology and spatial data to advance the understanding, modeling, and digital representation of urban environments and territories.<br><br>
+        Let's connect on"
+        data-es="Especialista en GIS, con una sólida base técnica en datos geoespaciales, modelado de datos, automatización de procesos y aplicaciones WebGIS.<br>
+        Transformo datos espaciales complejos en soluciones prácticas e interactivas: desde flujos de trabajo automatizados y cartografía hasta dashboards y visualizaciones 3D.<br>
+        Integro la tecnología y los datos espaciales para avanzar en la comprensión, modelado y representación digital del territorio.<br><br>
+        Puedes contactarme en">
+        GIS Specialist with a strong technical background in geospatial data, data modeling, workflow automation, and WebGIS applications.<br>
+        I turn complex spatial data into practical, interactive solutions, from automated workflows and data-driven maps to dashboards and 3D visualizations.<br>
+        I combine technology and spatial data to advance the understanding, modeling, and digital representation of urban environments and territories.<br><br>
+        Let's connect on
       </span>
       <a href="https://www.linkedin.com/in/malegre-gis/" target="_blank" aria-label="LinkedIn">LinkedIn</a>.
     </p>
   </header>
 
   <section>
-    <div class="section-header" data-en="3D GIS Visuals" data-es="Visuales GIS 3D">3D GIS Visuals</div>
+    <div class="section-header" data-en="PROYECTOS" data-es="PROJECTS">PROJECTS</div>
 
     <div class="project">
       <div class="project-info">
@@ -328,7 +337,9 @@
           data-es="Ver proyecto">View project</a>
       </div>
       <div class="project-media">
-        <img src="img/world-rivers-globe.gif" alt="World Rivers 3D Globe" />
+        <video autoplay loop muted playsinline>
+          <source src="img/world-rivers-globe.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -351,7 +362,9 @@
           data-es="Ver proyecto">View project</a>
       </div>
       <div class="project-media">
-        <img src="img/spain-population-3d.gif" alt="Spain Population 3D" />
+        <video autoplay loop muted playsinline>
+          <source src="img/spain-population-3d.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -374,7 +387,9 @@
           data-es="Ver proyecto">View project</a>
       </div>
       <div class="project-media">
-        <img src="img/mountain-3d-viewer.gif" alt="Mountain 3D Viewer" />
+        <video autoplay loop muted playsinline>
+          <source src="img/mountain-3d-viewer.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -397,14 +412,60 @@
           data-en="View project" data-es="Ver proyecto">View project</a>
       </div>
       <div class="project-media">
-        <img src="img/spain-inmigration-globe.gif" alt="Spain Immigration Globe" />
+        <video autoplay loop muted playsinline>
+          <source src="img/spain-inmigration-globe.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
-  </section>
 
-  <section>
-    <div class="section-header" data-en="Interactive Dashboards" data-es="Dashboards Interactivos">Interactive Dashboards</div>
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="Geo AI Explorer" data-es="Geo AI Explorer">Geo AI Explorer</h3>
+        <p data-en="WebGIS application that uses natural language to explore and visualize OpenStreetMap data."
+           data-es="Aplicación WebGIS que utiliza lenguaje natural para explorar y visualizar datos de OpenStreetMap.">
+          WebGIS application that uses natural language to explore and visualize OpenStreetMap data.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> OpenStreetMap and Overpass API."
+           data-es="<strong>Datos:</strong> OpenStreetMap y API de Overpass.">
+          <strong>Data:</strong> OpenStreetMap and Overpass API.
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> Python, FastAPI, JavaScript, Leaflet, and AI."
+           data-es="<strong>Tecnologías:</strong> Python, FastAPI, JavaScript, Leaflet e IA.">
+          <strong>Technologies:</strong> Python, FastAPI, JavaScript, Leaflet, and AI.
+        </p>
+        <a href="https://geo-ai-explorer.onrender.com/" target="_blank"
+          data-en="View project" data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <video autoplay loop muted playsinline>
+          <source src="img/geo-ai-explorer.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
+    <div class="project">
+      <div class="project-info">
+        <h3 data-en="How are municipalities connected?" data-es="¿Cómo se conectan los municipios?">How are municipalities connected??</h3>
+        <p data-en="Interactive map exploring intermunicipal mobility flows in Spain, highlighting the main mobility corridors and the intensity of connections within each province."
+           data-es="Mapa interactivo que explora los flujos de movilidad entre municipios en España, destacando los principales corredores de movilidad y la intensidad de las conexiones dentro de cada provincia.">
+          Interactive map exploring intermunicipal mobility flows in Spain, highlighting the main mobility corridors and the intensity of connections within each province.
+        </p>
+        <p class="data-line" data-en="<strong>Data:</strong> Ministry of Transport and Sustainable Mobility — Big Data Mobility Studies (2024)."
+           data-es="<strong>Datos:</strong> Ministerio de Transportes y Movilidad Sostenible — Estudios de movilidad con Big Data (2024).">
+          <strong>Data:</strong> Ministry of Transport and Sustainable Mobility — Big Data Mobility Studies (2024).
+        </p>
+        <p class="tech-line" data-en="<strong>Technologies:</strong> ArcGIS Online Map Viewer, Vector Tile Style Editor, and ArcGIS Online Assistant."
+           data-es="<strong>Tecnologías:</strong> ArcGIS Online Map Viewer, Vector Tile Style Editor y ArcGIS Online Assistant.">
+          <strong>Technologies:</strong> ArcGIS Online Map Viewer, Vector Tile Style Editor, and ArcGIS Online Assistant.
+        </p>
+        <a href="https://malegre.maps.arcgis.com/apps/mapviewer/index.html?webmap=4003c56a496b49028c5561000a64f0ac" target="_blank"
+          data-en="View project" data-es="Ver proyecto">View project</a>
+      </div>
+      <div class="project-media">
+        <img src="img/municipal-mobility.png" alt="How Are Municipalities Connected?" />
+      </div>
+    </div>
+   
     <div class="project">
       <div class="project-info">
         <h3 data-en="Spain Real Estate Evolution" data-es="Evolución del Mercado Inmobiliario en España">Spain Real Estate Evolution</h3>
@@ -476,7 +537,7 @@
   </section>
 
   <footer>
-    © 2025 Monica Alegre
+    © 2026 Monica Alegre
   </footer>
 
   <script>
